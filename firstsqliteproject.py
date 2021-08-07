@@ -98,6 +98,7 @@ def signIn(username, password):
 	sqlSgnIn = 'SELECT * FROM main WHERE name = ?'
 	sqlPassword = 'SELECT * FROM main WHERE password = ?'
 	cursor.execute(sqlSgnIn, (username,))
+	counter = 0
 	if cursor.fetchone():
 		print("username validated")
 		counter = 1
