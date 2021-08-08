@@ -52,13 +52,7 @@ menu = {
 		'cashierID' : 313
 	}
 }
-arr = ['Coffee', 'Burrito Wrap', 'Soft Drink', 'Ice Cream', 'Snow Cone']
-def printMenu():
-	print('Coffee =',menu['Coffee']['cashierID'])
-	print('Burrito Wrap =',menu['Burrito Wrap']['cashierID'])
-	print('Soft Drink =',menu['Soft Drink']['cashierID'])
-	print('Ice Cream =',menu['Ice Cream']['cashierID'])
-	print('Snow Cone =',menu['Snow Cone']['cashierID'])
+arr = ['Coffee', 'Burrito Wrap', 'Soft Drink', 'Ice Cream', 'Snow Cone', 'String Cheese', 'Apples']
 
 def createUser(name, password):
 	sql = 'INSERT INTO main(name, password, day, money) VALUES(?, ?, ?, ?)'
@@ -121,7 +115,7 @@ def playGame(username):
 	aotc = amtOfItems
 	print("This customer wants a:")
 	while aotc != 0:
-		x = random.randint(0,4)
+		x = random.randint(0, (len(arr)-1))
 		print(arr[x],menu[arr[x]]['cashierID'])
 		receipt.append(menu[arr[x]]['Cost'])
 		receiptId.append(menu[arr[x]]['cashierID'])
