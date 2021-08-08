@@ -40,12 +40,12 @@ menu = {
 	{
 		'Cost' : 1.50,
 		'cashierID' : 158
-	}
+	},
 	'String Cheese' :
 	{
 		'Cost': 2.50,
 		'cashierID' : 900
-	}
+	},
 	'Apples' :
 	{
 		'Cost' : 1,
