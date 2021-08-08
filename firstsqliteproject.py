@@ -96,11 +96,11 @@ def signIn(username, password):
 	counter = 0
 	if cursor.fetchone():
 		print("username validated")
-		counter = 1
+		counter += 1
 	cursor.execute(sqlPassword, (password,))
 	if cursor.fetchone():
 		print("password validated")
-		counter = 2
+		counter += 1
 	if counter == 2:
 		print("Login Successful")
 		return True
