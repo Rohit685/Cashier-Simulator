@@ -138,6 +138,7 @@ def playDay(username):
 	while amtOfCustomers != 0:
 		playGame(username)
 		amtOfCustomers -= 1
+	updateUserDay(username)
 	anotherDay = input("Do you want to play another day(yes or no): ")
 	if anotherDay == "yes":
 		playDay(username)
