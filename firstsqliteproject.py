@@ -41,6 +41,16 @@ menu = {
 		'Cost' : 1.50,
 		'cashierID' : 158
 	}
+	'String Cheese' :
+	{
+		'Cost': 2.50,
+		'cashierID' : 900
+	}
+	'Apples' :
+	{
+		'Cost' : 1,
+		'cashierID' : 313
+	}
 }
 arr = ['Coffee', 'Burrito Wrap', 'Soft Drink', 'Ice Cream', 'Snow Cone']
 def printMenu():
@@ -78,15 +88,6 @@ def updateUserDay(username):
 	sql = 'UPDATE main SET day = day + 1 WHERE name = ?'
 	cursor.execute(sql,(username, ))
 	db.commit()
-
-#use when creating the menu
-def createItem(item, cost, cashierID):
-	sql = 'INSERT INTO menu(item, cost, cashierID) VALUES(?,?,?)'
-	try: 
-		menucursor.execute(sql, (item, cost, cashierID))
-		menu.commit()
-	except sqlite3.Error as error:
-		print("Failed to insert data: ", error)
 
 def hashPassword(password):
 	h = sha256()
