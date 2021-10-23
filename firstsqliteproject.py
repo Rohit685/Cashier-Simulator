@@ -85,7 +85,7 @@ def updateUserDay(username):
 
 def hashPassword(password):
 	h = sha256()
-	h.update(b'password')
+	h.update(password.encode())
 	return h.hexdigest()
 
 def signIn(username, password):
